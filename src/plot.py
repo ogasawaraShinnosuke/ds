@@ -10,6 +10,17 @@ class Plot(metaclass=ABCMeta):
 
 
 class CsvPlot(Plot):
+    """
+    cp = CsvPlot('./resources/{}.csv')
+    cp.plots(['nikkei01',
+              'nikkei2007',
+              'nikkei2008',
+              'jasdaq01'],
+             ['NikkeiStockAverage span 250days',
+              'NikkeiStockAverage span 2007',
+              'NikkeiStockAverage span 2008',
+              'JASDAQ INDEX day'], True)
+    """
     def __init__(self, parent_path):
         self.parent_path = parent_path
 
